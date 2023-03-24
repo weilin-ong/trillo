@@ -1,0 +1,95 @@
+.container{
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--grey-light-2);
+    box-shadow: var(--box-shadow-dark);
+
+    min-height: 50rem;
+
+    @media only screen and (max-width:$largest){
+        margin: 0;
+        max-width: 100vw;
+    }
+}
+
+.header{
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: white;
+    border-bottom: 1px solid var(--grey-light-2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $smallest){
+        flex-wrap: wrap;
+        height: 10rem;
+        align-content: space-around;
+    }
+}
+
+.content{
+    display: flex;
+
+    @media only screen and (max-width: $medium){
+        flex-direction: column;
+    }
+}
+
+.sidebar{
+    background-color: var(--grey-dark-1);
+    flex: 0 0 18%; //grow 0 if there is enough space, shrink 0 if there is not enough space, keep basis 18% width
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hotel-view{
+    background-color: white;
+    flex: 1; //grow as much as it can if enough space aka remaining 82% after sidebar's 18% width deducted
+}
+
+.detail{
+    font-size: 1.4rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--grey-light-1);
+    border-bottom: 1px solid var(--grey-light-2);
+
+
+    @media only screen and (max-width: $medium){
+        padding: 2.5rem;
+    }
+
+    @media only screen and (max-width: $small){
+        flex-direction: column;
+    }
+}
+
+.description{
+    background-color: white;
+    padding: 3rem ;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    box-shadow: 0 2rem 5rem (black, .1);
+
+
+    @media only screen and (max-width: $medium){
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $small){
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-reviews{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; //default is stretch
+}
